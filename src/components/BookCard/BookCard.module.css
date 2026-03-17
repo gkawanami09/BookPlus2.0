@@ -1,0 +1,88 @@
+.card {
+    border: none;
+}
+
+.tituloTexto {
+    color: rgb(0 31 63);
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.categoriaTexto {
+    color: rgb(0 31 63 / 0.5);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.autorTexto {
+    color: rgb(0 31 63 / 0.4);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.imagem {
+    height: 356px;
+    width: 100%;
+    object-fit: cover;
+    transition: .7s;
+}
+
+.fundoSobreposto {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.divImagem {
+    overflow: hidden;
+    height: 356px;
+    position: relative;
+}
+
+.botaoSobreposto {
+    opacity: 0;
+    transform: translateY(0);
+    transition: .6s;
+    z-index: 13;
+    position: relative;
+}
+
+.card:hover .fundoSobreposto {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.card:hover .botaoSobreposto {
+    opacity: 1;
+    /* animation: fadeIn .7s ease-in-out 0s 1 normal forwards; */
+    transform: translateY(-80px);
+    transition: .6s;
+}
+
+.card:hover .tituloTexto {
+    color: rgb(0 31 63 / 0.8);
+    transition: .7s;
+}
+
+.card:hover .imagem{
+    transform: scale(1.1);
+    transition: .7s;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-80px);
+    }
+}
